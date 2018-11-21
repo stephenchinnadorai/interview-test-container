@@ -1,0 +1,17 @@
+{
+  "name": "interview-test-container",
+  "version": "1.0.0",
+  "description": "interview-test-container",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "KTech"
+  },
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "private": true
+}

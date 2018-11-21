@@ -1,0 +1,15 @@
+{
+  "name": "interview-test-container",
+  "description": "interview-test-container",
+  "version": "1.0.0",
+  "type": "project",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "KTech"
+    }
+  ],
+  "require": {
+    "php" : "^7.0"
+  }
+}
