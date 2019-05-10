@@ -16,19 +16,28 @@ containerise it.
 
 ## Criteria
 
-* Must not amend application structure
-* Must be containerised
-* Must be accessible locally via port 8080
+- [x] Must not amend application structure
+    - Application source files copied into container as-is
+- [x] Must be containerised
+    - Containerised with Docker
+- [x] Must be accessible locally via port 8080
+    - Port 8080 exposed inside the container and mapped to 8080 on the host
 
 ## Considerations
 
 * Should be able to start locally with one command
+    * `docker-compose up` or `docker run -p 8080:8080 stephenchinnadorai/interview-test-container`
 * Should be able to update application in real time when running locally
 * Should not conflict with other projects that may be building at the same time
+    * Unique image name ensures that the image is distinguishable from and won't conflict with others
 * Should consider different environments (i.e. local, build, deploy)
 * Should consider container patterns (i.e. linked/sidecar containers)
 * Should consider container security
+    * `node:10.15.3` bsae image - latest LTS release
+    * `node` user - not `root`
 * Should consider container efficiencies (i.e. image size, run time)
+    * `node:alpine` slim base image
+    * 73.3MB image size
 
 ## Discussion points
 
