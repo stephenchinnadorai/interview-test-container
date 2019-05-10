@@ -2,5 +2,6 @@ version: "3.7"
 services:
   interview-test-container:
     build: ./
+    image: stephenchinnadorai/interview-test-container
     ports:
       - "8080:8080"
