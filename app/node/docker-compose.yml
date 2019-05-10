@@ -4,5 +4,6 @@ services:
     build: ./
     image: stephenchinnadorai/interview-test-container
     user: "node"
+    init: true
     ports:
       - "8080:8080"
