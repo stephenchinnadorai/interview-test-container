@@ -40,6 +40,7 @@ containerise it.
 * Should consider container security
     * `node:10.15.3` base image - latest LTS release
     * `node` user - not `root`
+    * `npm prune` scans for vulnerabilities
 * Should consider container efficiencies (i.e. image size, run time)
     * `node:alpine` slim base image
     * 73.3MB image size
