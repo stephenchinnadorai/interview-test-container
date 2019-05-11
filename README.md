@@ -33,7 +33,7 @@ containerise it.
 * Should consider different environments (i.e. local, build, deploy)
 * Should consider container patterns (i.e. linked/sidecar containers)
 * Should consider container security
-    * `node:10.15.3` bsae image - latest LTS release
+    * `node:10.15.3` base image - latest LTS release
     * `node` user - not `root`
 * Should consider container efficiencies (i.e. image size, run time)
     * `node:alpine` slim base image
