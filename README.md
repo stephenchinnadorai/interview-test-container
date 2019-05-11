@@ -28,9 +28,14 @@ containerise it.
 * Should be able to start locally with one command
     * `docker-compose up` or `docker run -p 8080:8080 stephenchinnadorai/interview-test-container`
 * Should be able to update application in real time when running locally
+    * Use `dev-interview-test-container` to mount local source files and update them in real time without the need to rebuild the container and copy files in.
+    * Note that `nodemon` is needed for node to reflect changes in real time without a restart
 * Should not conflict with other projects that may be building at the same time
     * Unique image name ensures that the image is distinguishable from and won't conflict with others
 * Should consider different environments (i.e. local, build, deploy)
+    * Image is built for production with packages installed with `npm ci` and source files `src/` baked into the image to ensure this artifact runs the same everywhere
+    * For development/testing, a second docker-compose service with a volume mount to source files the host is provided, which uses the same image for production, but enables the source files to be updated on the fly. 
+    
 * Should consider container patterns (i.e. linked/sidecar containers)
 * Should consider container security
     * `node:10.15.3` base image - latest LTS release
