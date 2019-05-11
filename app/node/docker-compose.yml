@@ -3,7 +3,22 @@ services:
   interview-test-container:
     build: ./
     image: stephenchinnadorai/interview-test-container
-    user: "node"
     init: true
+    deploy:
+      resources:
+        limits:
+          memory: 300m
+    environment:
+      - "NODE_ENV=production"
+    ports:
+      - "8080:8080"
+
+  dev-interview-test-container:
+    image: stephenchinnadorai/interview-test-container
+    init: true
+    volumes:
+      - "./src/:/usr/src/app/src/"
+    environment:
+      - "NODE_ENV=development"
     ports:
       - "8080:8080"
