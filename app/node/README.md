@@ -3,10 +3,19 @@ The easiest way to build and run this application is to use `docker-compose`. Th
 ## Building
 From this directory, run `docker-compose build`
 
-This will build the Docker image and tag it.
+This will build the `stephenchinnadorai/interview-test-container` Docker image and tag it.
 
 ## Running
-To start up your newly built image and run it as a container `docker-compose up`
+To start up your newly built image and run it as a container
+### Development
+This container will mount your local source files so that you can make changes in real time.
+
+```docker-compose up dev-interview-test-container```
+### Production
+This container will use the source files copied in at build time and sets the Node environment to production.
+
+```docker-compose up interview-test-container```
+
 
 Logs will appear in stdout and let you know that your app is up and running
 
