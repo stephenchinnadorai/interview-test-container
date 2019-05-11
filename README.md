@@ -39,6 +39,7 @@ containerise it.
     * `node:alpine` slim base image
     * 73.3MB image size
     * Running with Docker's built-in `init` process, as Node is not designed to be PID 1 (doesn't respond to `SIGTERM`/CTRL+C, etc.)
+    * Add resource constraints, such as memory limits to the container to prevent OOM killing the host
 
 ## Discussion points
 
