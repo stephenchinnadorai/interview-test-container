@@ -34,7 +34,7 @@ containerise it.
     * Unique image name ensures that the image is distinguishable from and won't conflict with others
 * Should consider different environments (i.e. local, build, deploy)
     * Image is built for production with packages installed with `npm ci` and source files `src/` baked into the image to ensure this artifact runs the same everywhere
-    * For development/testing, a second docker-compose service with a volume mount to source files the host is provided, which uses the same image for production, but enables the source files to be updated on the fly. 
+    * For development/testing, a second docker-compose service with a volume mount to source files the host is provided, which uses the same image as production, but enables the source files to be updated on the fly. 
     
 * Should consider container patterns (i.e. linked/sidecar containers)
 * Should consider container security
